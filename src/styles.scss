@@ -1,0 +1,31 @@
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import './app/styles/table.scss';
+@import './app/styles/dropdown.scss';
+@import './app/styles/checkbox.scss';
+@import './app/styles/radio.scss';
+@import './app/styles/chip.scss';
+
+@import './app/themes/default.theme.scss';
+@import './app/themes/google.theme.scss';
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+.basic-container {
+  padding: 30px;
+}
+.version-info {
+  font-size: 8pt;
+  float: right;
+  margin: 8px;
+}
+.flex-spacer {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+
+
+/**  Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */

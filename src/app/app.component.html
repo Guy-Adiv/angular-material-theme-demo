@@ -1,0 +1,40 @@
+<div [class]="selectedTheme">
+    <mat-toolbar color="primary">
+        <span>Material Theme Demo</span>
+        <div class="flex-spacer"></div>
+        <mat-menu #appMenu="matMenu">
+            <button mat-menu-item *ngFor="let theme of themes" (click)="selectedTheme=theme.class">
+                {{theme.name}}
+            </button>
+        </mat-menu>
+        
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+            <mat-icon>format_color_fill</mat-icon>
+        </button>
+    </mat-toolbar>
+    <div class="mat-app-background basic-container">
+        <button-overview-example></button-overview-example>
+        <hr>
+        <app-dropdown-overview></app-dropdown-overview>
+        <hr>
+        <app-checkbox-overview></app-checkbox-overview>
+        <hr>
+        <app-radio-overview></app-radio-overview>
+        <hr>
+        <app-chips-overview></app-chips-overview>
+        <hr>
+        <app-text-overview></app-text-overview>
+        <hr>
+        <h3>This is my custom list component</h3>
+        <p>
+            * the shape is defined in the private component scss file
+        </p>
+        <p>
+            * the colors are defined in the scss theme file
+        </p>
+        <app-my-custom-list></app-my-custom-list>
+        <hr>
+        <app-table-overview></app-table-overview>
+    </div>
+    
+</div>

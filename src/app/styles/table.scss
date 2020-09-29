@@ -1,0 +1,73 @@
+table.av-table {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    color: inherit;
+
+    tr td, tr th{
+        &.cell-size-xs {
+            flex:none;
+            width: 2rem;
+        }
+        &.cell-size-sm {
+            flex-basis: 130px;
+        }
+        &.cell-size-md {
+            flex-basis: 180px;
+        }
+        &.cell-size-lg {
+            flex-basis: 230px;
+        }
+    }
+
+    thead {
+        width: 100%;
+        display: block;
+        padding: 15px 20px 0;
+        tr {
+            display: flex;
+            width: calc(100% - 0.35em);
+            align-items: flex-end;
+            padding-bottom: 10px;
+            th, td {
+                flex-grow: 1;
+                flex-basis: 0;
+                text-align: left;
+                min-width:10px;
+                word-break: break-word;
+            }
+        }
+    }
+
+    tbody {
+        display:block;
+        margin: 0 6px 10px 0px;
+        padding: 0 2px;
+        max-height: 450px;
+        overflow: scroll;
+        overflow-x: hidden;
+        tr {
+            display:flex;
+            align-items: center;
+            min-height: 40px;
+            padding: 0 10px 0 18px;
+
+            &:last-child {
+                border: none;
+            }
+            &.empty-table {
+                height: 100px;
+                &:hover {
+                    background-color: inherit;
+                }
+            }
+
+            td {
+                flex-grow: 1;
+                flex-basis: 0;
+                min-width:10px;
+                word-break: break-word;
+            }
+        }
+    }
+}
