@@ -1,0 +1,10 @@
+ul {
+    padding: 25px; //this is the shape of custome component
+    border: 2px solid;
+    max-width: 100px;
+
+    li {
+        padding: 0 5px;
+        line-height: 3;
+    }
+}

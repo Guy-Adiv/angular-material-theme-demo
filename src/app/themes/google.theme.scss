@@ -38,6 +38,8 @@
     $foreground: map-get($google-theme, foreground);
     color: mat-color($foreground, base);
 
+    // set the colors of your components here:
+
     table.av-table {
         background-color: mat-color($primary, A100);
         thead {
