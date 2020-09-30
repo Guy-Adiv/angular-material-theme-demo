@@ -1,0 +1,7 @@
+@import '../components/my-custom-list/my-custom-list.component.theme.scss';
+
+@mixin app-components-theme($theme) {
+  // Costom themes for components
+  // Here inject the selected theme into your component.
+  @include my-custom-list-theme($theme);
+}

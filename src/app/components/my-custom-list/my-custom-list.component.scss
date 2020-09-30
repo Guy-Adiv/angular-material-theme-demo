@@ -1,7 +1,10 @@
+//this is the style shape defenition of custome component
 ul {
-    padding: 25px; //this is the shape of custome component
+    padding: 25px; 
     border: 2px solid;
     max-width: 100px;
+    display: inline-block;
+    margin: 5px;
 
     li {
         padding: 0 5px;

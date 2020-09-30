@@ -1,12 +1,21 @@
 // @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/theming';
 @import './app/styles/table.scss';
 @import './app/styles/dropdown.scss';
 @import './app/styles/checkbox.scss';
 @import './app/styles/radio.scss';
 @import './app/styles/chip.scss';
 
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Here import all defined theme files.
 @import './app/themes/default.theme.scss';
 @import './app/themes/google.theme.scss';
+// Import the app components themes
+@import './app/themes/_components.scss';
 
 body {
   font-family: Roboto, Arial, sans-serif;
@@ -23,6 +32,20 @@ body {
 .flex-spacer {
   -webkit-box-flex: 1;
   flex-grow: 1;
+}
+
+// Inject the theme defention into a theme class.
+.app-default-theme {
+    // Include theme styles for core and each component used in your app.
+    // Alternatively, you can import and @include the theme mixins for each component
+    // that you are using.
+    @include angular-material-theme($default-theme);
+    @include app-components-theme($default-theme);
+}
+
+.app-google-theme {
+  @include angular-material-theme($google-theme);
+  @include app-components-theme($google-theme);
 }
 
 

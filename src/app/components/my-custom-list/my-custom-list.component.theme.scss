@@ -1,0 +1,43 @@
+// this is type theme style defenition of custom component
+
+@import "~@angular/material/theming";
+
+@mixin my-custom-list-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  // @debug $theme;
+
+  app-my-custom-list[color="primary"] {
+    ul {
+      background-color: mat-color($primary);
+      border-color: mat-color($primary, 900);
+
+      li {
+        color: mat-color($primary, 50);
+      }
+    }
+  }
+
+  app-my-custom-list[color="accent"] {
+    ul {
+      background-color: mat-color($accent);
+      border-color: mat-color($accent, 900);
+      li {
+        color: mat-color($accent, 50);
+      }
+    }
+  }
+
+  app-my-custom-list[color="warn"] {
+    ul {
+      background-color: mat-color($warn);
+      border-color: mat-color($warn, 900);
+      li {
+        color: mat-color($warn, 50);
+      }
+    }
+  }
+}

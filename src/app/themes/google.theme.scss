@@ -1,46 +1,26 @@
-@function default-theme-foreground($color) {
-    @return (
-        base:              $color,
-        divider:           $black-12-opacity,
-        dividers:          $black-12-opacity,
-        disabled:          rgba($color, 0.38),
-        disabled-button:   rgba($color, 0.38),
-        disabled-text:     rgba($color, 0.38),
-        hint-text:         rgba($color, 0.38),
-        secondary-text:    rgba($color, 0.54),
-        icon:              rgba($color, 0.54),
-        icons:             rgba($color, 0.54),
-        text:              rgba($color, 0.87),
-        slider-off:        rgba($color, 0.26),
-        slider-off-active: rgba($color, 0.38),
-    );
-};
 
-.app-google-theme {
-    // Define the palettes for your theme using the Material Design palettes available in palette.scss
-    // (imported above). For each palette, you can optionally specify a default, lighter, and darker
-    // hue. Available color palettes: https://material.io/design/color/
-    $primary: mat-palette($mat-gray);
-    $accent:  mat-palette($mat-blue, A200, A100, A400);
-    // The warn palette is optional (defaults to red).
-    $warn:    mat-palette($mat-red);
-    $foreground: default-theme-foreground(mat-color($primary, 700));
+@import './theme';
 
-    // Create the theme object (a Sass map containing all of the palettes).
-    $google-theme: map-merge(mat-light-theme($primary, $accent, $warn), (foreground: $foreground));
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$google-primary: mat-palette($mat-gray);
+$google-accent:  mat-palette($mat-blue, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$google-warn:    mat-palette($mat-red);
+$google-foreground: theme-foreground(mat-color($google-primary, 700));
 
-    // Include theme styles for core and each component used in your app.
-    // Alternatively, you can import and @include the theme mixins for each component
-    // that you are using.
-    @include angular-material-theme($google-theme);
+// Create the theme object (a Sass map containing all of the palettes).
+$google-theme: map-merge(mat-light-theme($google-primary, $google-accent, $google-warn), (foreground: $google-foreground));
+
 
     
-    $foreground: map-get($google-theme, foreground);
-    color: mat-color($foreground, base);
+   /*  $foreground: map-get($google-theme, foreground);
+    color: mat-color($foreground, base); */
 
     // set the colors of your components here:
 
-    table.av-table {
+    /* table.av-table {
         background-color: mat-color($primary, A100);
         thead {
             background-color: mat-color($accent);
@@ -54,10 +34,13 @@
                 }
             }
         }
-    }
+    } */
 
-    app-my-custom-list ul {
+    /* app-my-custom-list ul {
         background-color: mat-color($primary);
         color: mat-color($foreground, base);
-    }
-}
+    } */
+
+    /* button {
+        border-radius: 0;
+    } */

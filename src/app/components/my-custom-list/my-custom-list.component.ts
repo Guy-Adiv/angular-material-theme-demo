@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-my-custom-list',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyCustomListComponent implements OnInit {
 
+  @Input() color: string;
   list = ["item 1", "item 2", "item 3"];
 
   constructor() { }
